@@ -1,101 +1,65 @@
+'use client';
+
 import Image from "next/image";
+
+import {Montserrat, Quantico} from 'next/font/google'
+import HeaderBar from "./components/headerbar";
+import { motion } from "framer-motion";
+import { slideFromLeft } from "./components/animations";
+
+const montserrat = Montserrat({
+  weight: ["400", "700"], // Specify the weights you need
+  subsets: ["latin"],      // Specify the subset(s) you need
+  variable: "--font-montserrat", // Define a custom CSS variable
+});
+
+const quantico = Quantico({
+  weight: ["400", "700"], // Specify the weights you need
+  subsets: ["latin"],      // Specify the subset(s) you need
+  variable: "--font-quantico", // Define a custom CSS variable
+});
+
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className={`flex min-h-screen flex-col items-start justify-start p-10 bg-emerald-50 ${montserrat.variable} ${quantico.variable}`}>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <HeaderBar></HeaderBar>
+        <motion.div variants = {slideFromLeft} className="w-full" initial = "hidden"
+         animate = "active">
+        <div className="flex flex-row justify-between w-full">
+          <p className = "text-8xl text-emerald-800 font-bold font-quantico max-w-[900px]">
+            Hexadecimal Zero Robotics
+          </p>
+          <Image src = "/logo.png" alt = "logo" width={240} height={240} style={{borderRadius : 4}}/>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </motion.div>
+
+        
+
+        <div className="flex flex-col py-4">
+          <p className="text-5xl text-slate-950 font-bold font-montserrat py-2">What is Hexadecimal Zero?</p>
+          <p className="text-2xl text-slate-950 font-bold font-montserrat py-2">Hexadecimal Zero, FTC Team 26847, is a community-based rookie team from Central Texas, specifically the Austin area. As a group of passionate and eager students, we have come together to dive into the exciting world of FIRST Tech Challenge (FTC). Though we&apos;re just starting our journey in robotics, we&apos;re determined to learn, grow, and compete with energy and enthusiasm.
+            Our team is made up of individuals from diverse backgrounds, each bringing unique skills, talents, and perspectives. What unites us is our shared passion for science, technology, engineering, and mathematics (STEM). We chose the name Hexadecimal Zero to reflect our embrace of technology, coding, and problem-solving, as well as to symbolize our fresh start and limitless potential in FTC.
+          </p>
+        </div>
+
+        <div className="flex flex-col py-4">
+          <p className="text-5xl text-slate-950 font-bold font-montserrat py-2">
+            Thank you Sponsors!
+          </p>
+          <div className="flex flex-row gap-12 flex-wrap">
+            <Image src = "/ankermakelogo.png" alt = "ankermake logo" width={520} height={50} style={{borderRadius : 4}}/>
+            <Image src = "/polymakerlogo.png" alt = "polymaker logo" width={360} height={120} style={{borderRadius : 4}}/>
+            <Image src = "/qualcommlogo.png" alt = "qualcomm logo" width={880} height={20} style={{borderRadius : 4}}/>
+            <Image src = "/twclogo.png" alt = "twc logo" width={360} height={20} style={{borderRadius : 4}}/>
+            <Image src = "/scslogo.png" alt = "scs logo" width={300} height={40} style={{borderRadius : 4}}/>
+          </div>
+        </div>
+        
+
+
+    </main>
   );
 }
