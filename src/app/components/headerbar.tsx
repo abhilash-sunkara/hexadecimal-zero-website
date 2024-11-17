@@ -1,6 +1,6 @@
 import { useRouter, usePathname } from "next/navigation";
 import { motion } from 'framer-motion';
-import { slideFromLeft, slideFromTop } from "./animations";
+import {slideFromTop } from "./animations";
 
 const HeaderBar = () => {
   const router = useRouter();
