@@ -27,7 +27,7 @@ export default function Home() {
         
         <div className="w-full">
         
-        <div className="flex flex-row py-10 bg-white">
+        <div className="flex flex-row py-10">
           <Image src = "/meet1bot.png" alt = "meet 1 bot" width={800} height={400} style={{borderRadius : 4}}/>
           <div className = "flex flex-col px-8">
             <p className="text-5xl text-emerald-700 font-bold font-montserrat ">Meet 1</p>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row py-10 bg-white">
+        <div className="flex flex-row py-10">
           <Image src = "/meet1bot.png" alt = "meet 1 bot" width={800} height={400} style={{borderRadius : 4}}/>
           <div className = "flex flex-col px-8">
             <p className="text-5xl text-emerald-700 font-bold font-montserrat ">Meet 1</p>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row py-10 bg-white">
+        <div className="flex flex-row py-10">
           <Image src = "/meet1bot.png" alt = "meet 1 bot" width={800} height={400} style={{borderRadius : 4}}/>
           <div className = "flex flex-col px-8">
             <p className="text-5xl text-emerald-700 font-bold font-montserrat ">Meet 1</p>

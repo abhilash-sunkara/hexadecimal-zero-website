@@ -5,9 +5,7 @@ import Image from "next/image";
 import {Montserrat, Quantico} from 'next/font/google'
 import HeaderBar from "../components/headerbar";
 import { motion } from "framer-motion";
-import { slideFromBottom } from "../components/animations";
-
-
+import {slideFromBottom } from "../components/animations";
 
 const montserrat = Montserrat({
   weight: ["400", "700"], // Specify the weights you need
@@ -23,17 +21,12 @@ const quantico = Quantico({
 
 
 
-
-
 export default function Home() {
-
-    
-
-    
   return (
     <main className={`flex min-h-screen flex-col items-start justify-start p-10 bg-emerald-50 ${montserrat.variable} ${quantico.variable}`}>
-        
+
         <HeaderBar></HeaderBar>
+        
         <motion.div variants = {slideFromBottom} initial = "hidden"
          animate = "active">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-8 w-full">
@@ -45,9 +38,6 @@ export default function Home() {
             <GalleryElement text="On the Field" imgpath="/meet1bot.png" description="Robot on the field in action" />
         </div>
         </motion.div>
-        
-        
-
         
 
 

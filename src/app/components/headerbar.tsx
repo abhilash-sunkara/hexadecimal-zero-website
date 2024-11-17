@@ -34,7 +34,7 @@ const HeaderBar = () => {
         className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
         onClick={() => handleClick("gallery")}
       >
-        <p className="text-2xl text-slate-950 font-bold">Gallery</p>
+        <p className="text-2xl text-slate-950 font-bold">Robot Gallery</p>
         <div
           className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
             lastSegment === "gallery" ? "w-full" : "w-0"
@@ -56,24 +56,14 @@ const HeaderBar = () => {
         className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
         onClick={() => handleClick("outreach")}
       >
-        <p className="text-2xl text-slate-950 font-bold">Outreach</p>
+        <p className="text-2xl text-slate-950 font-bold">Outreach Gallery</p>
         <div
           className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
             lastSegment === "outreach" ? "w-full" : "w-0"
           } group-hover:w-full`}
         ></div>
       </div>
-      <div
-        className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
-        onClick={() => handleClick("contact")}
-      >
-        <p className="text-2xl text-slate-950 font-bold">Contact Us</p>
-        <div
-          className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
-            lastSegment === "contact" ? "w-full" : "w-0"
-          } group-hover:w-full`}
-        ></div>
-      </div>
+      
     </div>
     </motion.div>
   );

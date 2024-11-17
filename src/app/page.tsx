@@ -5,7 +5,8 @@ import Image from "next/image";
 import {Montserrat, Quantico} from 'next/font/google'
 import HeaderBar from "./components/headerbar";
 import { motion } from "framer-motion";
-import { slideFromLeft } from "./components/animations";
+import {slideFromLeft } from "./components/animations";
+import Carousel from "./components/carousel";
 
 const montserrat = Montserrat({
   weight: ["400", "700"], // Specify the weights you need
@@ -37,25 +38,24 @@ export default function Home() {
         </motion.div>
 
         
-
+        <motion.div variants = {slideFromLeft} initial = "hidden"
+         animate = "active">
         <div className="flex flex-col py-4">
           <p className="text-5xl text-slate-950 font-bold font-montserrat py-2">What is Hexadecimal Zero?</p>
           <p className="text-2xl text-slate-950 font-bold font-montserrat py-2">Hexadecimal Zero, FTC Team 26847, is a community-based rookie team from Central Texas, specifically the Austin area. As a group of passionate and eager students, we have come together to dive into the exciting world of FIRST Tech Challenge (FTC). Though we&apos;re just starting our journey in robotics, we&apos;re determined to learn, grow, and compete with energy and enthusiasm.
             Our team is made up of individuals from diverse backgrounds, each bringing unique skills, talents, and perspectives. What unites us is our shared passion for science, technology, engineering, and mathematics (STEM). We chose the name Hexadecimal Zero to reflect our embrace of technology, coding, and problem-solving, as well as to symbolize our fresh start and limitless potential in FTC.
           </p>
         </div>
+        </motion.div>
 
         <div className="flex flex-col py-4">
           <p className="text-5xl text-slate-950 font-bold font-montserrat py-2">
             Thank you Sponsors!
           </p>
-          <div className="flex flex-row gap-12 flex-wrap">
-            <Image src = "/ankermakelogo.png" alt = "ankermake logo" width={520} height={50} style={{borderRadius : 4}}/>
-            <Image src = "/polymakerlogo.png" alt = "polymaker logo" width={360} height={120} style={{borderRadius : 4}}/>
-            <Image src = "/qualcommlogo.png" alt = "qualcomm logo" width={880} height={20} style={{borderRadius : 4}}/>
-            <Image src = "/twclogo.png" alt = "twc logo" width={360} height={20} style={{borderRadius : 4}}/>
-            <Image src = "/scslogo.png" alt = "scs logo" width={300} height={40} style={{borderRadius : 4}}/>
-          </div>
+
+
+
+          <Carousel></Carousel>
         </div>
         
 

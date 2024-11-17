@@ -3,7 +3,8 @@ export const slideFromBottom = {
         y: 0,
         opacity : 1,
         transition : {
-            ease: "easeInOut"
+            type: "spring",
+            duration : 1.5
         }
     },
     hidden : {
