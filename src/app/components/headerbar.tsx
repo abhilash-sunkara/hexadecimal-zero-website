@@ -23,7 +23,7 @@ const HeaderBar = () => {
         className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
         onClick={() => handleClick("")}
       >
-        <p className="text-2xl text-slate-950 font-bold">Home</p>
+        <p className="text-2xl text-slate-950 font-bold font-montserrat ">Home</p>
         <div
           className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
             lastSegment === "" ? "w-full" : "w-0"
@@ -34,7 +34,7 @@ const HeaderBar = () => {
         className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
         onClick={() => handleClick("gallery")}
       >
-        <p className="text-2xl text-slate-950 font-bold">Robot Gallery</p>
+        <p className="text-2xl text-slate-950 font-bold font-montserrat">Robot Gallery</p>
         <div
           className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
             lastSegment === "gallery" ? "w-full" : "w-0"
@@ -45,7 +45,7 @@ const HeaderBar = () => {
         className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
         onClick={() => handleClick("blog")}
       >
-        <p className="text-2xl text-slate-950 font-bold">Blog</p>
+        <p className="text-2xl text-slate-950 font-bold font-montserrat">Blog</p>
         <div
           className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
             lastSegment === "blog" ? "w-full" : "w-0"
@@ -56,7 +56,7 @@ const HeaderBar = () => {
         className="m-4 p-4 flex flex-col group transition-all duration-300 ease-in-out cursor-pointer"
         onClick={() => handleClick("outreach")}
       >
-        <p className="text-2xl text-slate-950 font-bold">Outreach Gallery</p>
+        <p className="text-2xl text-slate-950 font-bold font-montserrat">Outreach Gallery</p>
         <div
           className={`min-h-[2px] bg-emerald-950 transition-all duration-300 ease-in-out ${
             lastSegment === "outreach" ? "w-full" : "w-0"
