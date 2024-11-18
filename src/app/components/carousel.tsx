@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-    "/ankermakelogo.png",
-    "/polymakerlogo.png",
-    "/qualcommlogo.png",
-    "/twclogo.png",
-    "/scslogo.png"
+    "/sponsor_logos/ankermakelogo.png",
+    "/sponsor_logos/polymakerlogo.png",
+    "/sponsor_logos/qualcommlogo.png",
+    "/sponsor_logos/twclogo.png",
+    "/sponsor_logos/scslogo.png"
   ];
 
 const Carousel = () => {
